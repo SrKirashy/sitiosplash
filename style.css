@@ -340,3 +340,12 @@ header{
 
     cursor: pointer;
 }
+
+
+.division_section_white{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 50px 1000px 50px 1000px ;
+    border-color: transparent white white transparent;
+}
