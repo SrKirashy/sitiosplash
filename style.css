@@ -349,3 +349,158 @@ header{
     border-width: 50px 1000px 50px 1000px ;
     border-color: transparent white white transparent;
 }
+
+
+
+
+
+/* Seção Acomodações*/
+.section_accommodation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section_accommodation .container {
+    margin-top: 50px;
+    width: 1057px;
+    display: flex;
+    background-color: white;
+}
+
+
+.section_accommodation .container .show_accomodation {
+    flex: 1;
+    margin: 0px 30px 0px 0px;
+}
+.section_accommodation .container .show_accomodation h1 {
+    font-family: Poppins;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(91deg, #3ACBC7 14.88%, #0096DC 86.62%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section_accommodation .container .show_accomodation p {
+    color: rgba(0, 150, 220, 0.80);
+    width: 553px;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: -20px;
+}
+.section_accommodation .container .show_accomodation button {
+    width: 275px;
+    height: 80px;
+    border-radius: 9px;
+    background: linear-gradient(90deg, #0096DC 0%, #3ACBC7 100.09%);
+    border: none;
+    box-shadow: -2px 2px 9px rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    cursor: pointer;
+}
+
+
+
+.section_accommodation .container .box_images {
+    flex: 1;
+    margin: 0px 30px 0px 30px;
+    margin-top: 260px;
+    margin-bottom: 100px;
+}
+.section_accommodation .container .box_images .image_1 {
+    width: 448px;
+    height: 634px;
+    border-radius: 8px;
+    background: url(./images/image1.jpeg), lightgray 50% / cover no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -5px 10px 13px 0px rgba(0, 0, 0, 0.68);
+}
+.section_accommodation .container .box_images .image_2 {
+    width: 487px;
+    height: 395px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: url(./images/image2.jpeg), lightgray 50% / cover no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: -5px 10px 13px 0px rgba(0, 0, 0, 0.68);
+    margin-left: -300px;
+    margin-top: -345px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1140px) {
+    .box_header{
+        width: 800px;
+    }
+    .section_home {
+        height: 500px;
+    }
+    .home_box_container{
+        width: 800px;
+    }
+    .home_box_container .text_home h1 {
+        font-size: 60px;
+    
+    }
+    .home_box_container p {
+        width: 400px;
+    }
+    .container_home h2{
+        margin-left: 300px
+    }
+    .home_box_container .home_networks {
+        margin-top: 50px;
+    }
+}
