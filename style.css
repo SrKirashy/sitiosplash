@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    padding: 0px;
     border: 0px;
     overflow-x:hidden;
 }
@@ -192,7 +193,7 @@ header{
 }
 .section_find_out_more .left_side {
     flex: 1;
-    margin: 0px 30px 0px 30px;
+    margin: 0px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -303,11 +304,11 @@ header{
 
 .section_find_out_more .right_side {
     flex: 1;
-    margin: 0px 30px 0px 30px;
+    margin: 0px 0px 0px 0px;
+    padding-left: 60px;
 }
 
 .section_find_out_more .right_side h1 {
-    width: 560px;
     color: #FFF;
     font-family: Poppins;
     font-size: 60px;
@@ -348,6 +349,7 @@ header{
     border-style: solid;
     border-width: 50px 1000px 50px 1000px ;
     border-color: transparent white white transparent;
+    display: none;
 }
 
 
@@ -467,20 +469,10 @@ header{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width:1140px) {
+    body{
+        overflow-x: hidden;
+    }
     .box_header{
         width: 800px;
     }
@@ -503,4 +495,107 @@ header{
     .home_box_container .home_networks {
         margin-top: 50px;
     }
+
+
+
+    .section_find_out_more .container{
+        width: 800px;
+
+    }
+    .section_find_out_more .right_side {
+        padding-left: 40px;
+    }
+    .section_find_out_more .right_side h1 {
+        font-size: 40px;
+    }
+    .section_find_out_more .right_side p {
+        width: 320px;
+        font-size: 30px;
+        
+    }
+
+    .section_find_out_more .left_side .slide_image_box {
+        width: 410px;
+        height: 280px;
+        margin-top: 40px;
+    }
+    .section_find_out_more .left_side h1 {
+        font-size: 30px;
+    }
+    .section_find_out_more .left_side p {
+        font-size: 18px;
+    }
+    .section_find_out_more .right_side button {
+        width: 201px;
+        height: 70px;
+    }
+
+
+
+
+
+    .section_accommodation .container {
+        width: 800px;
+        padding: 0px 40px 0px 40px;
+    }
+    .section_accommodation .container .show_accomodation{
+        flex: none; 
+    }
+    .section_accommodation .container .show_accomodation button {
+        width: 201px;
+        height: 70px;
+    }
+    .section_accommodation .container .show_accomodation h1 {
+        font-size: 40px;
+    }
+    .section_accommodation .container .show_accomodation p {
+        width: 320px;
+        font-size: 30px;
+    }
+    .section_accommodation .container .box_images{
+        flex: none;
+        width: 400px;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        margin-top: 45px;
+    }
+    .section_accommodation .container .box_images .image_1 {
+        width: 252px;
+        height: 357px;
+    }
+    .section_accommodation .container .box_images .image_2 {
+        width: 333px;
+        height: 270px;
+
+        margin-right: 120px;
+        margin-top: -90px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
