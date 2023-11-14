@@ -4,6 +4,7 @@ body{
     border: 0px;
     overflow-x:hidden;
 }
+
 header{
     background-color: #FFF;
     height: 74px;
@@ -572,8 +573,6 @@ header{
         margin-top: -90px;
     }
 }
-
-
 
 
 
