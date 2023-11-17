@@ -4,7 +4,9 @@ body{
     border: 0px;
     overflow-x:hidden;
 }
-
+.mobilebutton button {
+    display: none;
+}
 header{
     background-color: #FFF;
     height: 74px;
@@ -574,6 +576,348 @@ header{
     }
 }
 
+@media (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .box_header a img  {
+        width: 50px;
+        height: 50px;
+        margin-left: -20px;
+    }
+    .box_header img {
+        width: 37px;
+        height: 21px;
+        cursor: pointer;
+    }
+    .box_header{
+        width: 500px;
+    }
+    .section_home {
+        height: 400px;
+    }
+    .home_box_container{
+        width: 500px;
+    }
+    .home_box_container .text_home h1 {
+        font-size: 50px;
+    
+    }
+    .home_box_container p {
+        width: 400px;
+        font-size: 30px;
+    }
+    .container_home h2 {
+        margin-left: 2px;
+    }
+    .home_box_container .home_networks {
+        margin-top: -30px;
+    }
+    .home_box_container .home_networks img {
+        width: 24px ;
+        height: 24px ;
+    }
+    .home_box_container .home_networks h1 {
+        font-size: 10px;
+    }
+
+
+
+    .section_find_out_more .container{
+        width: 500px;
+        flex-direction: column-reverse;
+    }
+    .section_find_out_more .right_side {
+        padding-left: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px;
+    }
+    .section_find_out_more .right_side h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .section_find_out_more .right_side p {
+        width: 320px;
+        font-size: 18px;
+        
+    }
+
+    .section_find_out_more .left_side .slide_image_box {
+        width: 410px;
+        height: 280px;
+        margin-top: 40px;
+    }
+
+    .section_find_out_more .left_side h1 {
+        font-size: 27px;
+    }
+    .section_find_out_more .left_side p {
+        font-size: 18px;
+    }
+    .section_find_out_more .right_side button {
+        display: none;
+    }
+
+
+    .mobilebutton button {
+        display: block;
+        width: 150px;
+        height: 50px;
+        border-radius: 9px;
+        background: linear-gradient(90deg, #0096DC 0%, #3ACBC7 100.09%);
+        border: none;
+        box-shadow: -2px 2px 9px rgba(0, 0, 0, 0.25);
+        margin-top: 0px;
+        margin-bottom: 20px;
+
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        cursor: pointer;
+    }
+
+
+    .section_accommodation .container {
+        width: 500px;
+        padding: 0px 40px 0px 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section_accommodation .container .show_accomodation{
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+    }
+    .section_accommodation .container .show_accomodation button {
+        display: none;
+    }
+    .section_accommodation .container .show_accomodation h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .section_accommodation .container .show_accomodation p {
+        width: 210px;
+        font-size: 18px;
+    }
+    .section_accommodation .container .box_images{
+        flex: none;
+        width: 430px;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        margin: 45px 0px 50px 0px;
+    }
+    .section_accommodation .container .box_images .image_1 {
+        width: 200px;
+        height: 300px;
+    }
+    .section_accommodation .container .box_images .image_2 {
+        width: 270px;
+        height: 200px;
+
+        margin-right: 162px;
+        margin-top: -159px;
+    }
+}
+
+
+
+@media (max-width:512px) {
+    
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        height: 50px;
+    }
+    .box_header a img  {
+        width: 40px;
+        height: 40px;
+        margin-left: 0px;
+    }
+    .box_header img {
+        width: 30px;
+        height: 16px;
+        cursor: pointer;
+    }
+    .box_header{
+        width: 300px;
+        height: 50px;
+    }
+    .section_home {
+        margin-top: 50px;
+        height: 330px;
+    }
+    .home_box_container{
+        width: 300px;
+    }
+    .home_box_container .text_home {
+        margin-top: -90px;
+    }
+    .home_box_container .text_home h1 {
+        font-size: 40px;
+    
+    }
+    .home_box_container p {
+        width: 300px;
+        font-size: 25px;
+        margin-top: -25px;
+    }
+    .container_home h2 {
+        font-size: 10px;
+        margin-left: 9px;
+        display: none;
+    }
+    .home_box_container .home_networks {
+        width: 160px;
+        height: 25px;
+        margin-top: -50px;
+    }
+    .home_box_container .home_networks img {
+        width: 24px ;
+        height: 24px ;
+    }
+    .home_box_container .home_networks h1 {
+        font-size: 10px;
+        display: none;
+    }
+
+    .division_section{
+        margin-top: -39px;
+    }
+
+    .section_find_out_more .container{
+        width: 300px;
+        flex-direction: column-reverse;
+    }
+    .section_find_out_more .right_side {
+        padding-left: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px;
+    }
+    .section_find_out_more .right_side h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .section_find_out_more .right_side p {
+        width: 294px;
+        font-size: 18px;
+        
+    }
+
+    .section_find_out_more .left_side .slide_image_box {
+        width: 280px;
+        height: 180px;
+        margin-top: 40px;
+    }
+
+    .section_find_out_more .left_side h1 {
+        width: 200px;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    .section_find_out_more .left_side p {
+        width: 290px;
+        font-size: 18px;
+    }
+    .section_find_out_more .right_side button {
+        display: none;
+    }
+
+
+    .mobilebutton button {
+        display: block;
+        width: 150px;
+        height: 50px;
+        border-radius: 9px;
+        background: linear-gradient(90deg, #0096DC 0%, #3ACBC7 100.09%);
+        border: none;
+        box-shadow: -2px 2px 9px rgba(0, 0, 0, 0.25);
+        margin-top: 0px;
+        margin-bottom: 20px;
+
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        cursor: pointer;
+    }
+    .division_section img {
+        height: 40px;
+    }
+
+
+    .section_accommodation .container {
+        width: 250px;
+        padding: 0px 40px 0px 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section_accommodation .container .show_accomodation{
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+    }
+    .section_accommodation .container .show_accomodation button {
+        display: none;
+    }
+    .section_accommodation .container .show_accomodation h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .section_accommodation .container .show_accomodation p {
+        width: 210px;
+        font-size: 18px;
+    }
+    .section_accommodation .container .box_images{
+        flex: none;
+        width: 260px;
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        margin: 45px 0px 50px 0px;
+    }
+    .section_accommodation .container .box_images .image_1 {
+        width: 100px;
+        height: 100px;
+        border-radius: 0px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.524);
+    }
+    .section_accommodation .container .box_images .image_2 {
+        width: 170px;
+        height: 100px;
+        border-radius: 0px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.524);
+        margin: 0px;
+    }
+}
 
 
 
