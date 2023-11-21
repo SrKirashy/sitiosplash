@@ -372,7 +372,7 @@ header{
     width: 1057px;
     display: flex;
     background-color: white;
-    margin-bottom: 250px;
+    margin-bottom: 100px;
 }
 
 
@@ -471,6 +471,28 @@ header{
 
 
 /* Seção Diversão */
+/* Seção Diversão */
+/* Seção Diversão */
+/* Seção Diversão */
+/* Seção Diversão */
+/* Seção Diversão */
+/* Seção Diversão */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .section_divertissement{
     width: 100%;
@@ -599,7 +621,7 @@ header{
     margin-bottom: 50px;
 }
 .line_more {
-    width: 704px;
+    width: inherit;
     height: 2px;
     background-color: #ffffff86;
     margin-bottom: 50px;
@@ -664,7 +686,7 @@ header{
     margin-bottom: 150px;
 }
 .box_question {
-    width: 100%;
+    width: auto;
     height: 50px;
     display: flex;
     align-items: center;
@@ -707,6 +729,192 @@ header{
 
 
 
+
+
+/* Localização */
+
+.section_location {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0096DC;
+}
+.section_location .container_one, .container_two {
+    width: 1057px;
+}
+
+.text_location h1 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 67px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.text_location p {
+    max-width: 1057px;
+    color: rgba(255, 255, 255, 0.85);
+
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.mapBox {
+    width: 100vw;
+    height: 700px;
+    background-color: white;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.mapBox iframe {
+    width: inherit;
+    height: inherit;
+}
+.container_two {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+}
+.container_two h1 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.buttons_location {
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px 80px 0px;
+}
+.buttons_location h2 {
+    color: #FFF;
+
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.button_uber,.button_waze {
+    width: 233px;
+    height: 63px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+.button_uber img,.button_waze img{
+    width: 45px;
+    margin-right: 25px;
+}
+.button_uber h1,.button_waze h1 {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+
+
+
+
+
+
+/* Foooter */
+
+footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container {
+    width: 1057px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer_box {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    align-items: center;
+    margin: 44px 0px 44px 0px;
+}
+.footer_box .logo img {
+    width: 224px;
+    height: 92px;
+}
+.footer_redes {
+    display: flex;
+}
+.footer_redes a {
+    display: flex;
+    text-decoration: none;
+}
+.footer_button {
+    width: 180px;
+    height: 40px;
+    margin-left: 22px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_button img {
+    width: 39px;
+    height: 39px;
+    margin-right: 22px;
+}
+.footer_button h1 {
+    color: #555;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.copyright_box {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 0px 0px;
+    width: 1057px;
+    
+    color: #000;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    border-top: 0.5px solid #0499DC;
+
+}
+.copyright_box span {
+    color: #0499DC;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
 
 
 
@@ -816,9 +1024,147 @@ header{
         margin-right: 120px;
         margin-top: -90px;
     }
+
+
+
+
+
+ 
+    /* Restante */
+
+    .section_divertissement .container {
+        width: 800px;
+    }
+    .text_divertissement h1 {
+        font-size: 40px;
+    }
+    .text_divertissement p {
+        font-size: 30px
+    }
+   
+    .informations_box .image_informations img {
+        width: 400px;
+        height: 250px;
+    }
+    .informations_box .text_box_informations{
+        width: 300px;
+    }
+    .informations_box .text_box_informations h1 {
+        font-size: 30px;
+    }
+    .informations_box .text_box_informations p {
+        width: 350px;
+        font-size: 20px;
+        height: auto;
+        margin-top: -1px;
+        margin-bottom: 35px;
+    }
+    .section_divertissement button{
+        width: 201px;
+        height: 70px;
+    }
+
+    .section_questions_and_answers .container {
+        width: 800px;
+    }
+
+    .text_questions_and_answers h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .text_questions_and_answers p {
+        font-size: 30px;
+    }
+
+    .box_question p {
+        font-size: 20px;
+    }
+    .answer {
+        font-size: 18px;
+    }
+    
+
+
+
+
+
+
+    .section_location .container_one, .container_two {
+        width: 800px;
+    }
+    .text_location h1 {
+        font-size: 40px;
+    }   
+    .text_location p {
+        font-size: 30px;
+    }
+
+    .mapBox {
+        height: 500px;
+    }
+    .container_two {
+        margin-top: 10px;
+    }
+
+    .container_two h1 {
+
+    }
+    .button_uber, .button_waze {
+        width: 150px;
+        height: 43px;   
+    }
+    .button_uber img, .button_waze img {
+        width: 27px;
+        margin-right: 8px;
+    }
+    .button_uber h1, .button_waze h1 {
+        font-size: 25px;
+    }
+    .buttons_location {
+        width: 467px;
+        margin: 10px 0px 40px 0px;
+    }
+
+
+
+    footer .container {
+        width: 800px;
+    } 
+    .copyright_box {
+        width: 800px;
+    }
+    .footer_box {
+        margin: 10px 0px 10px 0px;
+    }
+    .footer_box .logo img {
+        width: 176px;
+        height: 89px;
+    }
+    .footer_redes {
+        width: 450px;
+    }
+    .footer_button {
+        width: 150px;
+    }
+    .footer_button h1 {
+        font-size: 10px;
+    }
+    .footer_button img {
+        width: 30px;
+        height: 30px;
+        margin-right: 9px;
+    }
+
+    .copyright_box {
+        font-size: 10px;
+    }
+    .copyright_box span {
+        font-size: 10px;
+    }
 }
 
-@media (max-width:768px) {
+@media (max-width:896px) {
     body{
         overflow-x: hidden;
     }
@@ -904,6 +1250,10 @@ header{
         display: none;
     }
 
+    .section_find_out_more .container{
+        margin-bottom: 59px;
+    }
+
 
     .mobilebutton button {
         display: block;
@@ -974,6 +1324,189 @@ header{
         margin-right: 162px;
         margin-top: -159px;
     }
+    .divison_section_acomodation {
+        margin-top: -74px;
+    }
+    .divison_section_acomodation img{
+        height: 75px;
+    }
+
+
+
+    /* Restante */
+
+    .section_divertissement .container {
+        width: 580px;
+    }
+    .text_divertissement {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text_divertissement h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .text_divertissement p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .informations_box, .informations_box:nth-child(odd) {
+     flex-direction: column;
+     align-items: center;
+    }
+    .informations_box .image_informations img {
+        width: 400px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .informations_box .text_box_informations{
+        width: 300px;
+        height: auto;
+        text-align: center;
+    }
+    .informations_box .text_box_informations h1 {
+        font-size: 30px;
+    }
+    .informations_box .text_box_informations p {
+        width: 350px;
+        font-size: 20px;
+        height: auto;
+        margin-top: -1px;
+        margin-bottom: 35px;
+    }
+    .section_divertissement button {
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+    .division_section_divertissement {
+        margin-top: -109px; 
+    }
+    .division_section_divertissement img{
+        height: 110px;
+    }
+
+
+
+
+
+    .container_questions {
+        margin-bottom: 41px;
+    }
+    .section_questions_and_answers{
+        padding-top: 29px;
+    }
+
+    .section_questions_and_answers .container {
+        width: 580px;
+    }
+
+    .text_questions_and_answers h1 {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .text_questions_and_answers p {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    .box_question p {
+        font-size: 14px;
+    }
+    .answer {
+        font-size: 11px;
+    }
+    .box_question img {
+        width: 18px;
+        height: 18px;
+    }
+    
+
+
+
+
+
+
+    .section_location .container_one, .container_two {
+        width: 580px;
+    }
+    .text_location h1 {
+        font-size: 30px;
+    }   
+    .text_location p {
+        font-size: 20px;    
+    }
+
+    .mapBox {
+        height: 400px;
+    }
+    .container_two {
+        margin-top: 10px;
+    }
+
+    .container_two h1 {
+        font-size: 20px; 
+    }
+    .button_uber, .button_waze {
+        width: 150px;
+        height: 43px;   
+    }
+    .buttons_location h2 {
+        font-size: 15px;
+    }
+    .button_uber img, .button_waze img {
+        width: 27px;
+        margin-right: 8px;
+    }
+    .button_uber h1, .button_waze h1 {
+        font-size: 25px;
+    }
+    .buttons_location {
+        width: 467px;
+        margin: 10px 0px 40px 0px;
+    }
+
+
+
+    footer .container {
+        width: 580px;
+    } 
+    .copyright_box {
+        width: 580px;
+    }
+    .footer_box {
+        margin: 10px 0px 10px 0px;
+    }
+    .footer_box .logo img {
+        width: 131px;
+        height: 63px;
+    }
+    .footer_redes {
+        width: 420px;
+    }
+    .footer_button {
+        width: 150px;
+    }
+    .footer_button h1 {
+        font-size: 10px;
+    }
+    .footer_button img {
+        width: 27px;
+        height: 27px;
+        margin-right: 5px;
+    }
+
+    .copyright_box {
+        font-size: 8px;
+    }
+    .copyright_box span {
+        font-size: 8px;
+    }
 }
 
 
@@ -998,7 +1531,7 @@ header{
         cursor: pointer;
     }
     .box_header{
-        width: 300px;
+        width: 370px;
         height: 50px;
     }
     .section_home {
@@ -1006,7 +1539,7 @@ header{
         height: 330px;
     }
     .home_box_container{
-        width: 300px;
+        width: 370px;
     }
     .home_box_container .text_home {
         margin-top: -90px;
@@ -1016,7 +1549,7 @@ header{
     
     }
     .home_box_container p {
-        width: 300px;
+        width: 370px;
         font-size: 25px;
         margin-top: -25px;
     }
@@ -1044,7 +1577,7 @@ header{
     }
 
     .section_find_out_more .container{
-        width: 300px;
+        width: 370px;
         flex-direction: column-reverse;
     }
     .section_find_out_more .right_side {
@@ -1160,9 +1693,223 @@ header{
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.524);
         margin: 0px;
     }
+
+
+
+
+
+
+
+
+
+    /* Restante */
+
+    .section_divertissement .container {
+        width: 370px;
+    }
+    .text_divertissement {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text_divertissement h1 {
+        width: 370px;
+        font-size: 30px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .text_divertissement p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .informations_box, .informations_box:nth-child(odd) {
+     flex-direction: column;
+     align-items: center;
+    }
+    .informations_box .image_informations img {
+        width: 298px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .informations_box .text_box_informations{
+        width: 300px;
+        height: auto;
+        text-align: center;
+    }
+    .informations_box .text_box_informations h1 {
+        font-size: 30px;
+    }
+    .informations_box .text_box_informations p {
+        width: 298px;
+        font-size: 20px;
+        height: auto;
+        margin-top: -1px;
+        margin-bottom: 35px;
+    }
+    .section_divertissement button {
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+    .line_more {
+        display: none;
+    }
+    
+
+
+
+
+
+
+    .section_questions_and_answers .container {
+        width: 370px;
+    }
+
+    .text_questions_and_answers h1 {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    .text_questions_and_answers p {
+        font-size: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .box_question p {
+        font-size: 10px;
+    }
+    .answer {
+        font-size: 10px;
+    }
+    .box_question img {
+        width: 18px;
+        height: 18px;
+    }
+    
+
+
+
+
+
+
+    .section_location .container_one, .container_two {
+        width: 370px;
+    }
+    .text_location h1 {
+        font-size: 30px;
+    }   
+    .text_location p {
+        font-size: 20px;    
+    }
+
+    .mapBox {
+        height: 400px;
+    }
+    .container_two {
+        margin-top: 10px;
+    }
+
+    .container_two h1 {
+        font-size: 20px; 
+    }
+    .button_uber, .button_waze {
+        width: 150px;
+        height: 43px;   
+    }
+    .buttons_location h2 {
+        font-size: 15px;
+    }
+    .button_uber img, .button_waze img {
+        width: 27px;
+        margin-right: 8px;
+    }
+    .button_uber h1, .button_waze h1 {
+        font-size: 25px;
+    }
+    .buttons_location {
+        flex-direction: column;
+        width: 300px;
+        margin: 10px 0px 40px 0px;
+    }
+
+
+
+    footer .container {
+        width: 370px;
+    } 
+    .copyright_box {
+        width: 370px;
+    }
+    .footer_box {
+        flex-direction: column-reverse;
+        margin: 10px 0px 10px 0px;
+    }
+    .footer_box .logo img {
+        width: 131px;
+        height: 63px;
+    }
+    .footer_redes {
+        width: 300px;
+        margin-bottom: 25px;
+    }
+    .footer_button {
+        width: 150px;
+    }
+    .footer_button h1 {
+        display: none;
+    }
+    .footer_button img {
+        width: 27px;
+        height: 27px;
+        margin-right: 5px;
+    }
+
+    .copyright_box {
+        font-size: 8px;
+    }
+    .copyright_box span {
+        font-size: 8px;
+    }   
+    
 }
 
+@media (max-width:375px) { 
+    .box_header{
+        width: 300px;
+    }
 
+    .home_box_container{
+        width: 300px;
+    }
+
+    .home_box_container p {
+        width: 300px;
+    }
+    .section_find_out_more .container{
+        width: 300px;
+    }
+    .section_divertissement .container{
+        width: 300px;
+    }
+    .text_divertissement h1 {
+        width: 300px;
+    }
+    .section_questions_and_answers .container{
+        width: 300px;
+    }
+    .section_location .container_one, .container_two {
+        width: 300px;
+    }
+    footer .container {
+        width: 300px;
+    } 
+    .copyright_box {
+        width: 300px;
+    }
+}
 
 
 
