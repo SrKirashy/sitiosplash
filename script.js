@@ -28,5 +28,5 @@ function upDateLoading() {
     let percentage = (scrollNow  / scrollHeight) * 100;
     
 
-    loading.style.width = `${percentage}%`;    
+    loading.style.width = `${percentage}%`;
 }
