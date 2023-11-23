@@ -59,12 +59,28 @@ header{
     margin-top: 74px;
     width: 100%;
     height: 700px;
+    overflow: hidden;
+}
+.image_home_section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    margin-top: inherit;
     background-image: url(./images/HomeImage.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: rgb(47, 47, 47);
+    transition:background-size 5s;
+    -webkit-transition: scale 1s;
+    z-index: -1;
+    scale: 110%;
 }
+.section_home:hover .image_home_section {
+    scale: 100%;
+}
+
 .filter_home {
     width: inherit;
     height: inherit;
@@ -168,6 +184,7 @@ header{
     width: 100%;
     height: auto;
     margin-top: -70px;
+    z-index: 1;
 }
 .division_section img{
     width: inherit;
