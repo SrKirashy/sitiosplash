@@ -1,4 +1,4 @@
-let divertissement = [
+const divertissemen = [
     {title: 'Playground Infantil', subtitle:'Playground no gramado para as crianças',img:''},
     {title: 'Salão de Jogos', subtitle:'Com mesas de bilhar, sinuca , ping-pong, pebolim e air hockey.',img:''},
     {title: 'Campo de Futebol e Volei', subtitle:'Um campo gramado de futebol e um campo gramado de volei',img:''},
@@ -10,3 +10,4 @@ let divertissement = [
     {title: 'Casinha de Boneca', subtitle:'Casinha de boneca para visitação',img:''},
     {title: 'Lago', subtitle:'Lago com possibilidade limitada de pesca para grupo pequeno ',img:''}
 ]
+
