@@ -1,6 +1,7 @@
 
 let loading = document.querySelector('.loading');
-let buttonViewMore = document.querySelector('.section_divertissement button')
+let buttonViewMore = document.querySelector('.section_divertissement button');
+let boxQuestions = document.querySelectorAll('.box_question');
 let scrollPosition = 0;
 
 const divertissement = [
@@ -19,7 +20,7 @@ const divertissement = [
 
 
 
-divertissementUpdate(3);
+divertissementUpdate(divertissement.length);
 
 
 
@@ -28,6 +29,7 @@ divertissementUpdate(3);
 
 window.addEventListener('scroll', ()=>{upDateLoading()});
 buttonViewMore.addEventListener('click',()=> {divertissementUpdate(divertissement.length)})
+boxQuestions.forEach(e => e.addEventListener('click', (e) => upDateQuestions(e)))
 
 
 
@@ -87,5 +89,42 @@ function divertissementUpdate(numberOfImages) {
     } else {
         buttonViewMore.textContent = 'VER MAIS'
         divertissementUpdate(3);
+    }
+};
+
+function upDateQuestions(e) {
+
+    let questionClicked = e.currentTarget
+
+    if(questionClicked == document.querySelector('.box_question.active') ) {
+        cleanerQuestions();
+    } else {
+
+        cleanerQuestions();
+
+        questionClicked.classList.add('active');
+        questionClicked.querySelector('img').style.transform = 'rotate(-180deg)';
+        
+        let newDiv= document.createElement('div');
+        newDiv.classList.add('answer');
+        questionClicked.after(newDiv);
+
+        document.querySelector('.answer').innerHTML = `<p>reposta fica aqui! reposta fica aqui! reposta fica aqui! reposta fica aqui!</p>`;
+        
+        setTimeout(()=> {
+            document.querySelector('.answer').style.marginTop = '0px';
+            document.querySelector('.answer').style.opacity = '100%';
+        },100);
+        
+    } 
+};
+
+function cleanerQuestions() {
+    let elementActive = document.querySelector('.box_question.active');
+
+    if(elementActive != null) {
+        elementActive.querySelector('img').style.transform = 'rotate(0deg)';
+        document.querySelector('.box_question.active').classList.remove('active');
+        document.querySelector('.answer').remove();
     }
 }
