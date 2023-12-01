@@ -1,6 +1,14 @@
 
 let loading = document.querySelector('.loading');
 let buttonViewMore = document.querySelector('.section_divertissement button');
+
+
+let menu = document.querySelector('#img_menu');
+let menuBox = document.querySelector('nav');
+let backgroundMenu = document.querySelector('nav .background');
+let menuOpen = document.querySelector('.menu_box');
+let close = document.querySelector('.menu_box img');
+let screenWidth = window.screen.width;
 let boxQuestions = document.querySelectorAll('.box_question');
 let scrollPosition = 0;
 
@@ -28,6 +36,7 @@ divertissementUpdate(divertissement.length);
 
 
 window.addEventListener('scroll', ()=>{upDateLoading()});
+menu.addEventListener('click', ()=> {menuClicked()})
 buttonViewMore.addEventListener('click',()=> {divertissementUpdate(divertissement.length)})
 boxQuestions.forEach(e => e.addEventListener('click', (e) => upDateQuestions(e)))
 
@@ -63,10 +72,39 @@ function upDateLoading() {
 
 
 
+function menuClicked() {
+    menuBox.style.display = "flex";
+    backgroundMenu.style.display = "flex";
+    menuOpen.style.display = "flex";
+
+    setTimeout(()=>{
+        console.log(screenWidth)
+        if (screenWidth > 484) {
+            menuOpen.style.width = '450px';
+        }
+        else {
+            menuOpen.style.width = '340px';
+        }
+        
+        backgroundMenu.style.opacity = "100%";
+    }, 100);
+    
+
+    backgroundMenu.addEventListener('click',(e)=> {closeMenu(e)});
+    close.addEventListener('click',(e)=> {closeMenu(e)});
+}
 
 
+function closeMenu(e) {
+        menuOpen.style.width = '0px';
+        backgroundMenu.style.opacity = "0%";
 
-
+    setTimeout(()=>{
+        menuBox.style.display = "none";
+        backgroundMenu.style.display = "none";
+        menuOpen.style.display = "none";
+        },900)
+}
 
 
 
