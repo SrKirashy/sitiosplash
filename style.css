@@ -3,10 +3,13 @@ body{
     padding: 0px;
     border: 0px;
     overflow-x:hidden;
+    text-decoration: none;
 }
 .mobilebutton button {
     display: none;
 }
+
+
 header{
     background-color: #FFF;
     height: 74px;
@@ -108,7 +111,8 @@ nav .background {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 260px;
+    margin-top: 220px;
+    transition: 0.5s;
     border-top: 0.5px solid #3acbc6;
 }
 #logo_Menu_Open {
@@ -227,11 +231,19 @@ nav .background {
     height: 60px;
     margin-top: 220px ;
     background-color: rgba(255, 255, 255, 0.103);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 5px solid transparent;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.098);
+}
+
+.filter_networks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 .home_networks img {
     width: 33px;
@@ -1620,6 +1632,11 @@ footer .container {
     .copyright_box span {
         font-size: 8px;
     }
+
+
+    .mobilebutton a {
+        text-decoration: none;
+    }
 }
 
 
@@ -1920,11 +1937,11 @@ footer .container {
     .box_question p {
         width: 280px;
         text-align: start;
-        font-size: 13px;
+        font-size: 18px;
     }
     .answer {
         width: 250px;
-        font-size: 12px;
+        font-size: 18px;
     }
     .box_question img {
         width: 18px;
@@ -1959,7 +1976,7 @@ footer .container {
         font-size: 20px; 
     }
     .button_uber, .button_waze {
-        width: 120px;
+        width: 158px;
         height: 43px;   
     }
     .buttons_location h2 {

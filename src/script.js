@@ -9,6 +9,10 @@ let backgroundMenu = document.querySelector('nav .background');
 let menuOpen = document.querySelector('.menu_box');
 let close = document.querySelector('.menu_box img');
 let boxQuestions = document.querySelectorAll('.box_question');
+let logoMenu = document.querySelector('.box_logo_menu');
+
+let menuSpan = document.querySelectorAll('.navOptions span');
+
 let scrollPosition = 0;
 
 const divertissement = [
@@ -38,7 +42,7 @@ window.addEventListener('scroll', ()=>{upDateLoading()});
 menu.addEventListener('click', ()=> {menuClicked()})
 buttonViewMore.addEventListener('click',()=> {divertissementUpdate(divertissement.length)})
 boxQuestions.forEach(e => e.addEventListener('click', (e) => upDateQuestions(e)))
-
+menuSpan.forEach(e => e.addEventListener('click', (e)=>{menuSpanClicked(e)}))
 
 
 
@@ -78,14 +82,13 @@ function menuClicked() {
     menuOpen.style.display = "flex";
 
     setTimeout(()=>{
-        console.log(screenWidth)
         if (screenWidth > 484) {
             menuOpen.style.width = '450px';
         }
         else {
             menuOpen.style.width = '340px';
         }
-        
+        logoMenu.style.opacity = "100%";
         backgroundMenu.style.opacity = "100%";
     }, 100);
     
@@ -98,13 +101,192 @@ function menuClicked() {
 function closeMenu(e) {
         menuOpen.style.width = '0px';
         backgroundMenu.style.opacity = "0%";
+        logoMenu.style.opacity = "0%";
 
     setTimeout(()=>{
         menuBox.style.display = "none";
         backgroundMenu.style.display = "none";
         menuOpen.style.display = "none";
-        },900)
+        },800)
 }
+
+function menuSpanClicked(e) {
+    let valueSpan = e.currentTarget.textContent;
+    let screenWidth = window.screen.width;
+
+    switch (valueSpan) {
+        case 'Menu':
+            if (screenWidth < 895) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            }
+            else {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            }
+            
+            closeMenu();
+            break;
+
+        case 'Conheça Mais':
+            
+            if (screenWidth < 1140 && screenWidth > 896) {
+                window.scrollTo({
+                    top: 543,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 895 && screenWidth >  512) {
+                window.scrollTo({
+                    top: 411,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 512) {
+                window.scrollTo({
+                    top: 330,
+                    behavior: 'smooth'
+                })
+            }
+            else {
+                window.scrollTo({
+                    top: 740,
+                    behavior: 'smooth'
+                })
+            }
+            closeMenu();
+            break;
+
+        case 'Acomodações':
+            if (screenWidth < 1140 && screenWidth > 896) {
+                window.scrollTo({
+                    top: 1236,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 895 && screenWidth >  512) {
+                window.scrollTo({
+                    top: 1190,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 512) {
+                window.scrollTo({
+                    top: 1155,
+                    behavior: 'smooth'
+                })
+            }
+
+            else {
+                window.scrollTo({
+                    top: 1703,
+                    behavior: 'smooth'
+                })
+            }
+            closeMenu();
+            break;
+
+        case 'Diversão':
+            if (screenWidth < 1140 && screenWidth > 896) {
+                window.scrollTo({
+                    top: 2013,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 895 && screenWidth >  512) {
+                window.scrollTo({
+                    top: 2009,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 512) {
+                window.scrollTo({
+                    top: 1802,
+                    behavior: 'smooth'
+                })
+            }
+
+            else {
+                window.scrollTo({
+                    top: 2847,
+                    behavior: 'smooth'
+                })
+            }
+            closeMenu();
+            break;
+        
+        case 'Perquntas Frequentes':
+            if (screenWidth < 1140 && screenWidth > 896) {
+                window.scrollTo({
+                    top: 6098,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 895 && screenWidth >  512) {
+                window.scrollTo({
+                    top: 7047,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth <  512 && screenWidth > 375) {
+                window.scrollTo({
+                    top: 6530,
+                    behavior: 'smooth'
+                })
+            }
+
+            else if (screenWidth < 375) {
+                window.scrollTo({
+                    top: 5966,
+                    behavior: 'smooth'
+                })
+            }
+
+            else {
+                window.scrollTo({
+                    top: 7119,
+                    behavior: 'smooth'
+                })
+            }
+            closeMenu();
+            break;
+        
+        case 'Localização':
+            if (screenWidth < 1140 && screenWidth > 896) {
+                window.scrollTo({
+                    top: 7199,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 895) {
+                window.scrollTo({
+                    top: 7843,
+                    behavior: 'smooth'
+                })
+            }
+            else {
+                window.scrollTo({
+                    top: 8304,
+                    behavior: 'smooth'
+                })
+            }
+            closeMenu();
+            break;
+        default:
+            return;
+    }
+}
+
+
+
+
+
+
+
 
 
 
