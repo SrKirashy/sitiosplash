@@ -10,36 +10,27 @@ let menuOpen = document.querySelector('.menu_box');
 let close = document.querySelector('.menu_box img');
 let boxQuestions = document.querySelectorAll('.box_question');
 let logoMenu = document.querySelector('.box_logo_menu');
-
 let menuSpan = document.querySelectorAll('.navOptions span');
 
-let scrollPosition = 0;
+let arrowLeft = document.querySelector('.arrow_left');
+let arrowRight = document.querySelector('.arrow_right');
 
-const divertissement = [
-    {title: 'Playground Infantil', subtitle:'Playground no gramado para as crianças',img:'playgroundInfantil.jpeg'},
-    {title: 'Salão de Jogos', subtitle:'Com mesas de bilhar, sinuca , ping-pong, pebolim e air hockey.',img:'salaoDeJogos.jpeg'},
-    {title: 'Campo de Futebol e Volei', subtitle:'Um campo gramado de futebol e um campo gramado de volei',img:'campoDeFutebol.jpeg'},
-    {title: 'Salão de Festas', subtitle:'Salão fechado para festas e eventos com capacidade para 180 pessoas sentadas',img:'salãoDeFestas.jpeg'},
-    {title: 'Piscinas Infantil', subtitle:'Piscina para crianças com profundidade crescente entre 20cm e 60cm',img:'piscinainfantil.jpeg'},
-    {title: 'Salão Cerimonial', subtitle:'Salão fechado para realização de casamentos, cultos e apresentações',img:'salaoCerimonial.jpeg'},
-    {title: 'Alimentação', subtitle:'Possibilidade de contratar nosso buffet',img:'alimentaçao.jpeg'},
-    {title: 'Fogueira de Inverno', subtitle:'Fogueira de inverno com banco circular ',img:'fogueira.jpeg'},
-    {title: 'Casinha de Boneca', subtitle:'Casinha de boneca para visitação',img:'CasaDeBoneca.jpeg'},
-    {title: 'Lago', subtitle:'Lago com possibilidade limitada de pesca para grupo pequeno ',img:'Lago.jpeg'}
-]
+let scrollPosition = 0;
+let imageId = 0;
 
 
 
 
 divertissementUpdate(divertissement.length);
-
-
+upDateImage(0);
 
 
 
 
 window.addEventListener('scroll', ()=>{upDateLoading()});
 menu.addEventListener('click', ()=> {menuClicked()})
+arrowLeft.addEventListener('click', ()=>{nextImage('-')})
+arrowRight.addEventListener('click', ()=>{nextImage('+')})
 buttonViewMore.addEventListener('click',()=> {divertissementUpdate(divertissement.length)})
 boxQuestions.forEach(e => e.addEventListener('click', (e) => upDateQuestions(e)))
 menuSpan.forEach(e => e.addEventListener('click', (e)=>{menuSpanClicked(e)}))
@@ -284,9 +275,50 @@ function menuSpanClicked(e) {
 
 
 
+function nextImage (e) {
+    if (e === '+') {
+        if (imageId === divertissement.length - 1) {
+            imageId = 0;
+        } else {
+            imageId += 1;
+        }
+        upDateImage(imageId)
+    }
+    else if (e === '-'){
+        if (imageId === 0) {
+            imageId += divertissement.length -1;
+        } else {
+            imageId -= 1
+        }
+        upDateImage(imageId)
+    }
+    else{
+        console.log('error')
+        return;
+    }
+}
 
+function upDateImage(number) {
+    let image = document.querySelector('.section_find_out_more .left_side .slide_image_box');
+    let title = document.querySelector('.section_find_out_more .container h1');
+    let subtitle = document.querySelector('.section_find_out_more .container p');
 
+    console.log(number)
+    
+    image.style.opacity = '0%';
+    title.style.opacity = '0%';
+    subtitle.style.opacity = '0%';
 
+    setTimeout(()=>{
+        image.style.backgroundImage =  `url(./images/divertissement/${divertissement[number].img})`
+        title.innerHTML = divertissement[number].title;
+        subtitle.innerHTML = divertissement[number].subtitle;
+        image.style.opacity = '100%';
+        title.style.opacity = '100%';
+        subtitle.style.opacity = '100%';
+    },50)
+
+}
 
 
 
