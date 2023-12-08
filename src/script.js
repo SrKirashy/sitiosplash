@@ -20,6 +20,8 @@ let imageId = 0;
 divertissementUpdate(divertissement.length);
 upDateImage(0);
 getQuestions();
+setInterval(()=>nextImage('+'),5000);
+
 
 
 window.addEventListener('scroll', ()=>{upDateLoading()});
