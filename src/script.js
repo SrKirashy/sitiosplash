@@ -1,14 +1,11 @@
-
 let loading = document.querySelector('.loading');
 let buttonViewMore = document.querySelector('.section_divertissement button');
-
 
 let menu = document.querySelector('#img_menu');
 let menuBox = document.querySelector('nav');
 let backgroundMenu = document.querySelector('nav .background');
 let menuOpen = document.querySelector('.menu_box');
 let close = document.querySelector('.menu_box img');
-let boxQuestions = document.querySelectorAll('.box_question');
 let logoMenu = document.querySelector('.box_logo_menu');
 let menuSpan = document.querySelectorAll('.navOptions span');
 
@@ -20,11 +17,9 @@ let imageId = 0;
 
 
 
-
 divertissementUpdate(divertissement.length);
 upDateImage(0);
-
-
+getQuestions();
 
 
 window.addEventListener('scroll', ()=>{upDateLoading()});
@@ -32,21 +27,11 @@ menu.addEventListener('click', ()=> {menuClicked()})
 arrowLeft.addEventListener('click', ()=>{nextImage('-')})
 arrowRight.addEventListener('click', ()=>{nextImage('+')})
 buttonViewMore.addEventListener('click',()=> {divertissementUpdate(divertissement.length)})
-boxQuestions.forEach(e => e.addEventListener('click', (e) => upDateQuestions(e)))
 menuSpan.forEach(e => e.addEventListener('click', (e)=>{menuSpanClicked(e)}))
-
-
-
-
-
-
-
-
-
-
-
-
-
+function listenerQuestions() {
+    let boxQuestions = document.querySelectorAll('.box_question');
+    boxQuestions.forEach(e => e.addEventListener('click', (e)=>{upDateAnswer(e)}));
+}
 
 
 
@@ -59,12 +44,6 @@ function upDateLoading() {
 
     loading.style.width = `${percentage}%`;
 }
-
-
-
-
-
-
 
 function menuClicked() {
     let screenWidth = window.screen.width;
@@ -87,7 +66,6 @@ function menuClicked() {
     backgroundMenu.addEventListener('click',(e)=> {closeMenu(e)});
     close.addEventListener('click',(e)=> {closeMenu(e)});
 }
-
 
 function closeMenu(e) {
         menuOpen.style.width = '0px';
@@ -272,9 +250,6 @@ function menuSpanClicked(e) {
     }
 }
 
-
-
-
 function nextImage (e) {
     if (e === '+') {
         if (imageId === divertissement.length - 1) {
@@ -302,8 +277,6 @@ function upDateImage(number) {
     let image = document.querySelector('.section_find_out_more .left_side .slide_image_box');
     let title = document.querySelector('.section_find_out_more .container h1');
     let subtitle = document.querySelector('.section_find_out_more .container p');
-
-    console.log(number)
     
     image.style.opacity = '0%';
     title.style.opacity = '0%';
@@ -319,10 +292,6 @@ function upDateImage(number) {
     },50)
 
 }
-
-
-
-
 
 function divertissementUpdate(numberOfImages) {
     let divContainer = document.querySelector('.container_informations');
@@ -344,15 +313,31 @@ function divertissementUpdate(numberOfImages) {
     }
 };
 
-function upDateQuestions(e) {
+function getQuestions(){
+    let questionBox = document.querySelector('.container_questions');
+    let questions = '';
+    for (let item in questionsAndAnswers) {
+        questions = questions + `
+        <div class="box_question" id="${item}"> 
+        <p>${questionsAndAnswers[item].question}</p>
+        <img src="./assets/seta.png" alt="Seta para abrir resposta.">
+        </div>
+        `;
+    }
+    questionBox.innerHTML = questions;
 
-    let questionClicked = e.currentTarget
+    listenerQuestions();
+}
 
-    if(questionClicked == document.querySelector('.box_question.active') ) {
-        cleanerQuestions();
+function upDateAnswer(e) {
+    let questionClicked = e.currentTarget;
+    let questionClickedId = e.currentTarget.id;
+    
+    if(questionClicked === document.querySelector('.box_question.active') ) {
+        cleanerAnswer();
     } else {
 
-        cleanerQuestions();
+        cleanerAnswer();
 
         questionClicked.classList.add('active');
         questionClicked.querySelector('img').style.transform = 'rotate(-180deg)';
@@ -361,7 +346,8 @@ function upDateQuestions(e) {
         newDiv.classList.add('answer');
         questionClicked.after(newDiv);
 
-        document.querySelector('.answer').innerHTML = `<p>reposta fica aqui! reposta fica aqui! reposta fica aqui! reposta fica aqui!</p>`;
+
+        document.querySelector('.answer').innerHTML = `<p>${questionsAndAnswers[questionClickedId].answer}</p>`;
         
         setTimeout(()=> {
             document.querySelector('.answer').style.marginTop = '0px';
@@ -371,7 +357,7 @@ function upDateQuestions(e) {
     } 
 };
 
-function cleanerQuestions() {
+function cleanerAnswer() {
     let elementActive = document.querySelector('.box_question.active');
 
     if(elementActive != null) {

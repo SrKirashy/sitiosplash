@@ -854,12 +854,15 @@ nav .background {
 }
 
 .answer {
-    margin-left: 30px;
+    width: inherit;
     font-size: 20px;
     display: block;
     transition: 0.5s;
     opacity: 0%;
     margin-top: -20px;
+}
+.answer p {
+    padding: 0px 30px 0px 30px;
 }
 
 
@@ -1960,7 +1963,6 @@ footer .container {
         font-size: 18px;
     }
     .answer {
-        width: 250px;
         font-size: 18px;
     }
     .box_question img {
