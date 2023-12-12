@@ -1,20 +1,26 @@
 const divertissement = [
     {title: 'Piscinas Infantil', subtitle:'Piscina para crianças com profundidade crescente entre 20cm e 60cm',img:'piscinainfantil.jpeg'},
-    {title: 'Salão de Jogos', subtitle:'Com mesas de bilhar, sinuca , ping-pong, pebolim e air hockey.',img:'salaoDeJogos.jpeg'},
+    {title: 'Salão de Jogos', subtitle:'Com mesas de bilhar, sinuca , ping-pong, pebolim e air hockey.',img:'20231115_100403.jpg'},
     {title: 'Campo de Futebol e Volei', subtitle:'Um campo gramado de futebol e um campo gramado de volei',img:'campoDeFutebol.jpeg'},
     {title: 'Salão de Festas', subtitle:'Salão fechado para festas e eventos com capacidade para 180 pessoas sentadas',img:'salãoDeFestas.jpeg'},
     {title: 'Salão Cerimonial', subtitle:'Salão fechado para realização de casamentos, cultos e apresentações',img:'salaoCerimonial.jpeg'},
     {title: 'Playground Infantil', subtitle:'Playground no gramado para as crianças',img:'playgroundInfantil.jpeg'},
     {title: 'Alimentação', subtitle:'Possibilidade de contratar nosso buffet',img:'alimentaçao.jpeg'},
-    {title: 'Fogueira de Inverno', subtitle:'Fogueira de inverno com banco circular ',img:'fogueira.jpeg'},
+    {title: 'Fogueira de Inverno', subtitle:'Fogueira de inverno com banco circular ',img:'IMG-20210306-WA0020.jpg'},
     {title: 'Casinha de Boneca', subtitle:'Casinha de boneca para visitação',img:'CasaDeBoneca.jpeg'},
-    {title: 'Lago', subtitle:'Lago com possibilidade limitada de pesca para grupo pequeno ',img:'Lago.jpeg'}
+    {title: 'Lago', subtitle:'Lago com possibilidade limitada de pesca para grupo pequeno ',img:'Lago.jpeg'},
+    {title: 'Espaço Pet', subtitle: 'Local para acomodar seu animal de estimação', img: '20231115_115023.jpg'}
 ]
-
+const homeImages = [
+    {title: 'Piscina principal', subtitle:' Piscina principal com profundidade crescente entre 0,80 m e 2,00 m',img:'HomeImage.jpg'},
+    {title: 'Espaço Pet', subtitle: 'Local para acomodar seu animal de estimação', img: '20231115_115023.jpg'},
+    {title: 'Salão de Jogos', subtitle:'Com mesas de bilhar, sinuca , ping-pong, pebolim e air hockey.',img:'20231115_100403.jpg'},
+    {title: 'Piscinas Infantil', subtitle:'Piscina para crianças com profundidade crescente entre 20cm e 60cm',img:'piscinainfantil.jpeg'},
+]
 const questionsAndAnswers = [
     {
       question: "Qual o valor da diária?",
-      answer: "Prazer em ajudar! O valor para uma diária é de R$50 por pessoa, e o mínimo é de 60 pessoas pagantes inteiras. Para reservas acima de 2 dias, o valor por dia é de R$40. Caso tenha mais dúvidas ou queira fazer uma reserva, estou à disposição!"
+      answer: "Os preços dependem da demanda e disponibilidade em cada data, entre em contato no nosso WhatsApp para consultar."
     },
     {
       question: "Qual o mínimo de pessoas?",

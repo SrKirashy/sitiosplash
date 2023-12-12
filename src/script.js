@@ -254,7 +254,7 @@ function menuSpanClicked(e) {
 
 function nextImage (e) {
     if (e === '+') {
-        if (imageId === divertissement.length - 1) {
+        if (imageId === homeImages.length - 1) {
             imageId = 0;
         } else {
             imageId += 1;
@@ -263,7 +263,7 @@ function nextImage (e) {
     }
     else if (e === '-'){
         if (imageId === 0) {
-            imageId += divertissement.length -1;
+            imageId += homeImages.length -1;
         } else {
             imageId -= 1
         }
@@ -285,9 +285,9 @@ function upDateImage(number) {
     subtitle.style.opacity = '0%';
 
     setTimeout(()=>{
-        image.style.backgroundImage =  `url(./images/divertissement/${divertissement[number].img})`
-        title.innerHTML = divertissement[number].title;
-        subtitle.innerHTML = divertissement[number].subtitle;
+        image.style.backgroundImage =  `url(./images/divertissement/${homeImages[number].img})`
+        title.innerHTML = homeImages[number].title;
+        subtitle.innerHTML = homeImages[number].subtitle;
         image.style.opacity = '100%';
         title.style.opacity = '100%';
         subtitle.style.opacity = '100%';
