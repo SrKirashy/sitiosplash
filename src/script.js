@@ -20,6 +20,7 @@ let imageId = 0;
 divertissementUpdate(divertissement.length);
 upDateImage(0);
 getQuestions();
+renderGallery();
 setInterval(()=>nextImage('+'),5000);
 
 
@@ -193,26 +194,26 @@ function menuSpanClicked(e) {
         case 'Perquntas Frequentes':
             if (screenWidth < 1140 && screenWidth > 896) {
                 window.scrollTo({
-                    top: 6098,
+                    top: 6390,
                     behavior: 'smooth'
                 })
             }
             else if (screenWidth < 895 && screenWidth >  512) {
                 window.scrollTo({
-                    top: 7047,
+                    top: 7491,
                     behavior: 'smooth'
                 })
             }
             else if (screenWidth <  512 && screenWidth > 375) {
                 window.scrollTo({
-                    top: 6530,
+                    top: 6947,
                     behavior: 'smooth'
                 })
             }
 
-            else if (screenWidth < 375) {
+            else if (screenWidth <= 375) {
                 window.scrollTo({
-                    top: 5966,
+                    top: 6361,
                     behavior: 'smooth'
                 })
             }
@@ -227,26 +228,89 @@ function menuSpanClicked(e) {
             break;
         
         case 'Localização':
-            if (screenWidth < 1140 && screenWidth > 896) {
+            if (screenWidth > 1140) {
                 window.scrollTo({
-                    top: 7199,
+                    top: 9086,
                     behavior: 'smooth'
                 })
             }
-            else if (screenWidth < 895) {
+            else if (screenWidth < 1140 && screenWidth > 896) {
                 window.scrollTo({
-                    top: 7843,
+                    top: 8038,
                     behavior: 'smooth'
                 })
             }
+            else if (screenWidth < 895 && screenWidth >  512) {
+                window.scrollTo({
+                    top:  8847,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth <  512 && screenWidth > 375) {
+                window.scrollTo({
+                    top: 8354,
+                    behavior: 'smooth'
+                })
+            }
+
+            else if (screenWidth <= 375) {
+                window.scrollTo({
+                    top: 7743,
+                    behavior: 'smooth'
+                })
+            }
+
             else {
                 window.scrollTo({
-                    top: 8304,
+                    top: 7119,
                     behavior: 'smooth'
                 })
             }
             closeMenu();
             break;
+        case 'Galeria':
+            if (screenWidth > 1140) {
+                window.scrollTo({
+                    top: 10549,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 1140 && screenWidth > 896) {
+                window.scrollTo({
+                    top: 8959,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth < 895 && screenWidth >  512) {
+                window.scrollTo({
+                    top: 9546,
+                    behavior: 'smooth'
+                })
+            }
+            else if (screenWidth <  512 && screenWidth > 375) {
+                window.scrollTo({
+                    top: 9080,
+                    behavior: 'smooth'
+                })
+            }
+
+            else if (screenWidth <= 375) {
+                window.scrollTo({
+                    top: 8520,
+                    behavior: 'smooth'
+                })
+            }
+
+            else {
+                window.scrollTo({
+                    top: 8611,
+                    behavior: 'smooth'
+                })
+            }
+            closeMenu();
+            break;
+
+
         default:
             return;
     }
@@ -366,5 +430,14 @@ function cleanerAnswer() {
         elementActive.querySelector('img').style.transform = 'rotate(0deg)';
         document.querySelector('.box_question.active').classList.remove('active');
         document.querySelector('.answer').remove();
+    }
+}
+
+function renderGallery() {
+    let lengthGallery = gallery.length;
+    let divGallery = document.querySelector('.container_gallery');
+
+    for (let i = 0; i < lengthGallery; i++) {
+        divGallery.innerHTML = divGallery.innerHTML + `<div class="image_box_gallery"><img src="./images/gallery/${gallery[i].img}" alt=""></div>`;
     }
 }
